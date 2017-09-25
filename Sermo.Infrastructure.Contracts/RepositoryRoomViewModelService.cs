@@ -26,6 +26,8 @@ namespace Sermo.UI.Controllers
 
         public IEnumerable<RoomViewModel> GetAllRooms()
         {
+            //Changes for Sprint 1 -- I want to view a list of rooms that represent conversations -- Dan Willman
+
             var allRooms = new List<RoomViewModel>();
             var allRoomRecords = roomRepository.GetAllRooms();
             foreach(var roomRecord in allRoomRecords)

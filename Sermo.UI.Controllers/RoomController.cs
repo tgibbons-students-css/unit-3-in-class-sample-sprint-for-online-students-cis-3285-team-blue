@@ -36,6 +36,7 @@ namespace Sermo.UI.Controllers
             return View(new RoomViewModel());
             // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Tom Gibbons
             // Changes Sprint 1 --  Made another change -- Tom Gibbons
+            // Changes Spring 1 --  Some changes -- Dan Willman
         }
 
         [HttpPost]
