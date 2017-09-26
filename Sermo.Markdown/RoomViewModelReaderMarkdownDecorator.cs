@@ -25,6 +25,8 @@ namespace Sermo.Markdown
 
         public IEnumerable<MessageViewModel> GetRoomMessages(int roomID)
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
+
             var roomMessages = @delegate.GetRoomMessages(roomID);
 
             foreach(var viewModel in roomMessages)

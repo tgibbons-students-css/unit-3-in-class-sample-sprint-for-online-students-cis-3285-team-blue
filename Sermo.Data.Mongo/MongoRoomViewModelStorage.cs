@@ -33,6 +33,8 @@ namespace Sermo.Data.Mongo
 
         public IEnumerable<MessageViewModel> GetRoomMessages(int roomID)
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
+
             var messageQuery = Query<MessageViewModel>.EQ(viewModel => viewModel.RoomID, roomID);
             var messagesCollection = GetMessagesCollection();
             return messagesCollection.Find(messageQuery);
@@ -46,6 +48,7 @@ namespace Sermo.Data.Mongo
 
         private MongoCollection<MessageViewModel> GetMessagesCollection()
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
             var database = GetDatabase();
             var messagesCollection = database.GetCollection<MessageViewModel>(MessagesCollection);
             return messagesCollection;

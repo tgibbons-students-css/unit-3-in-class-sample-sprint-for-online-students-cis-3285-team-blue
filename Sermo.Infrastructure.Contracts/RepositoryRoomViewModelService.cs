@@ -26,6 +26,7 @@ namespace Sermo.UI.Controllers
 
         public IEnumerable<RoomViewModel> GetAllRooms()
         {
+
             //Changes for Sprint 1 -- I want to view a list of rooms that represent conversations -- Dan Willman
 
             var allRooms = new List<RoomViewModel>();
@@ -50,6 +51,8 @@ namespace Sermo.UI.Controllers
 
         public void CreateRoom(RoomViewModel roomViewModel)
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
+
             var roomRecord = mapper.MapRoomViewModelToRoomRecord(roomViewModel);
             roomRepository.CreateRoom(roomRecord.Name);
         }

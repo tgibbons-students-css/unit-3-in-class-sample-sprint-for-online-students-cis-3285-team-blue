@@ -24,7 +24,9 @@ namespace Sermo.Data.AdoNet
 
         public void CreateRoom(string name)
         {
-            using(var connection = databaseFactory.CreateConnection())
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
+
+            using (var connection = databaseFactory.CreateConnection())
             {
                 connection.ConnectionString = applicationSettings.GetValue("SermoConnectionString");
                 connection.Open();
@@ -48,6 +50,8 @@ namespace Sermo.Data.AdoNet
 
         public IEnumerable<RoomRecord> GetAllRooms()
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
+
             var allRooms = new List<RoomRecord>();
 
             using(var connection = databaseFactory.CreateConnection())

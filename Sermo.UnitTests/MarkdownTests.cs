@@ -39,6 +39,7 @@ namespace Sermo.UnitTests
         [SetUp]
         public void SetUp()
         {
+            // Changes Sprint 1 --  I want to create rooms for categorizing conversations -- Farah
             markdown = new Markdown();
             message1 = new MessageViewModel
             {

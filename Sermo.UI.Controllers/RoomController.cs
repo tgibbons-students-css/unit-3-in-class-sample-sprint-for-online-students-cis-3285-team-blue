@@ -15,6 +15,8 @@ namespace Sermo.UI.Controllers
     {
         public RoomController(IRoomViewModelReader reader, IRoomViewModelWriter writer)
         {
+           
+
             Contract.Requires<ArgumentNullException>(reader != null);
             Contract.Requires<ArgumentNullException>(writer != null);
 
@@ -25,6 +27,7 @@ namespace Sermo.UI.Controllers
         [HttpGet]
         public ActionResult List()
         {
+
             var roomListViewModel = new RoomListViewModel(reader.GetAllRooms());
             
             return View(roomListViewModel);
